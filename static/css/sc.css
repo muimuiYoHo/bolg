@@ -1,0 +1,175 @@
+body {
+    display: block;
+    color: white;
+    margin: 0;  
+    padding: 0;  
+    list-style: none;  
+    text-decoration: none;  
+    font-family: Arial, sans-serif;  
+    box-sizing: border-box;
+    max-width: 100vw;
+    cursor: url('../piuter/TB2LdUrj9tkpuFjy0FhXXXQzFXa_!!3037771681.png'), default;
+}  
+a:hover {
+    cursor: url('../piuter/TB2paoVj3JlpuFjSspjXXcT.pXa_!!3037771681.png'), pointer;
+}
+a {
+    text-decoration: none;  
+    color: white;
+}
+no {
+    color: #00bbff00;
+}
+.D {
+    position: fixed;
+    height: 100vh;
+    width: 100vw;
+    background-image: url('../piuter/sc-b-3.png');
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    z-index: -114514;
+    }
+    nav {  
+        overflow: hidden;  
+        position: fixed;
+        top: 20px;  
+        width: 94%;  
+        left: 2.7%;
+        border-radius: 15px;
+        z-index: 114513; 
+        display: flex;  
+        align-items: center;    
+        height: 70px;       
+        background-color: #00000000;
+        transition: all 1.5s;
+        backdrop-filter: blur(0px);
+        overflow: hidden;
+        border-bottom: 2px solid rgba(0, 0, 0, 0);
+        border-bottom-width: 50%;
+    }  
+    nav>a {  
+        color: white;  
+        text-decoration: none;  
+        font-size: 18px;  
+        display: block;  
+        transition:color 0.3s; 
+        font-size: 1.2em;
+        margin: 25px;
+    }  
+    nav>a:hover {  
+        color: #49ccff;  
+    }  
+    .nav-logo {  
+        flex-shrink: 0;
+        bottom: 0;
+        margin-left: 20px;
+    }  
+    .nav-logo img {  
+        height: 35px;  
+        width: auto;  
+    }
+    .nav-up {
+        margin-left: auto;
+        display: flex;
+        overflow: hidden;
+        align-items: center;
+        justify-content: center;
+        border-radius: 50%;
+        font-size: 12px;
+        height: 40px;
+        color: white;
+        width: 40px;
+        background-color: rgba(199, 199, 199, 0.317);
+        border: 2px solid;
+        border-color: #ffffff;
+        margin-right: 15px;
+    }
+    #进度条 {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 5px;
+        border-radius: 15px;
+        background-color: #00bbff;
+        z-index: 114514;
+        transition: all 0.3s;
+        display: none; 
+    }
+    footer {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        bottom: 0;
+        height: 100px;
+        width: 100%;
+    }
+    .sc-sogan-1 {
+        position: relative;
+        display: flex;
+        width: 30%;
+        top: 100px;
+        justify-content: center;
+        color: white;
+        font-size:2.3em;
+        margin: 0 auto;
+    }
+    .sc-sogan-2 {
+        position: relative;
+        font-size: small;
+        margin-top: 10px;
+    }
+    .sc-kp0 {
+        display: block;
+        width: 65%;
+        position: relative;
+        top: 200px;
+        margin: 0 auto;
+    }
+.sc-kp {
+    position: relative;
+    display: flex;
+    flex-shrink: 0;
+    align-items: center;
+    margin-bottom: 40px;
+    width: 100%;
+    height: 120px;
+    background-color: rgba(0, 0, 0, 0.5);
+    backdrop-filter: blur(5px);
+    border-radius: 15px;
+    padding: 15px 25px 15px 40px;
+}
+.kp-txt-0 {
+    position: absolute;
+    top: 0;
+}
+.kp-txt-1 {
+    position: absolute;
+    bottom: 5px;
+    margin-left: 10px;
+}
+.sc-kp-div {
+    display: block;
+    margin-top: 30px;
+    height: 90px;
+    width: 80px;
+    padding: 0px 20px 0px 20px;
+    text-align: center;
+    background-color: rgba(169, 169, 169, 0);
+    border-radius: 10px;
+    transition: all .5s;
+}
+.sc-kp-div:hover {
+    background-color: rgba(169, 169, 169, 0.3);
+
+}
+.sc-kp-div-tx {
+    height: 60px;
+    width: 60px;
+}
+.sc-kp-div-tx-压缩{
+    height: 50px;
+    width: 50px;
+    margin-top: 5px;
+}
