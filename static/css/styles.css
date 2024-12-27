@@ -263,14 +263,17 @@ nav>a:hover {
     margin-right: auto;
 }
 .sy-2-card1 {  
-    /*display: flex;
-    flex-shrink: 0;                       */
-    display: block;
-    background: white; 
-    border-radius: 10px;  
-    width: 210px;  
+    display: flex;
+    flex-shrink: 1;
+    flex-direction: column;
+    align-items: center;    
     text-align: center;  
     position: relative; 
+    background: white; 
+    border-radius: 10px;  
+    padding-top: 10px;
+    width: 210px;  
+    gap: 30px;
     z-index: 3;  
     transition: all 0.5s ease; 
     color: #000;
@@ -286,15 +289,11 @@ nav>a:hover {
     width: 90%;  
     border-radius: 10px; 
     transition: all 0.5s ease; 
-    background-color: #fe7bf3;
     z-index: 4;
-    margin: 0 auto;
-    margin-top: 10px;
-    margin-bottom: 30px;
 }  
 .sy-2-card1-p:hover{  
     transform: scale(1.25);                         /*放大*/
-    margin-bottom: 55px;
+    margin-bottom: 30px;
 } 
 .sy-2-card1::before {                                              /*填色  一个透明的伪*/
 content: '';
@@ -325,14 +324,12 @@ z-index: -1;
 .sy-2-card1>a {
     display: block;
     position: relative;
-    margin: 0 auto;
     height: 40px;
     width: 60px;
     background-image: url('../piuter/bilibili.png');
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
-    margin-top: 9.5%;
 }
 .sy-2-card1>a:hover {
     background-color: rgb(188, 188, 188);

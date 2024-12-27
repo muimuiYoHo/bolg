@@ -1,3 +1,4 @@
+//总之就是edge提示
 function sc() {  
     alert('请按下 Ctrl+D 将此页面添加到您的收藏栏以防迷路');  
 }  
