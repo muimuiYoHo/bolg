@@ -118,8 +118,7 @@ no {
     transition: all 0.4s ease; 
     &:hover {
         cursor: url('../piuter/TB2paoVj3JlpuFjSspjXXcT.pXa_!!3037771681.png'), pointer;
-        /*background-image: url('../piuter/置顶2.png');*/
-        
+        background-image: url('../piuter/置顶2.png');
     }
 }
 .sy-左上 {

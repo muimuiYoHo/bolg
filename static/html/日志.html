@@ -19,34 +19,40 @@ body {
     padding: 0;  
     background-color: #f7f7f7; 
     color: #333;  
+    cursor: url('../piuter/TB2LdUrj9tkpuFjy0FhXXXQzFXa_!!3037771681.png'), default;
 }  
 header {  
+    position: fixed;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    top: 0;
+    height: 10vh;
+    width: 100%;
     background: #ffffff; 
     color: #333333;  
-    padding: 1rem 0;  
     text-align: center;  
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);  
+    z-index: 4;
 }  
 header h1 {  
-    margin: 0;  
+    position: absolute;
     font-size: 2rem;  
     font-weight: normal;  
 }  
 header p {  
-    margin: 0.5rem 0 0;  
-    font-size: 1rem;  
+    margin-top: 80px;
+    font-size: 0.95rem;  
     color: #999999;   
 }  
+.T {
+    height: 10vh;
+    width: auto;
+}
 .up-log {  
-    margin-bottom: 2rem;  
-}  
-.up-log h2 {  
-    color: #1877f2;
-    border-bottom: 1px solid #e5e5e5; 
-    display: inline-block;  
-    padding-bottom: 0.5rem;  
-    margin-bottom: 1rem;  
-    font-weight: normal; 
+    margin-bottom: 2rem; 
+    z-index: 1; 
 }  
 .up-log ul {  
     list-style-type: none; 
@@ -68,23 +74,88 @@ header p {
     background-color: #1877f2;
     border-radius: 50%; 
 }
+il {
+    color: orange;
+}
+bule {
+    color: rgb(0, 200, 255);
+}
+pink {
+    color: pink;
+}
+plum {
+    color: plum;
+}
+.up-log-il::after {     
+    content: '';  
+    position: absolute;  
+    left: 0;  
+    top: 0.7rem;
+    width: 6px;  
+    height: 6px;  
+    background-color: orangered;
+    border-radius: 50%; 
+}
 footer {  
     text-align: center;  
+    justify-content: center;
     padding: 1rem 0;  
     background: #ff730098;   
     color: #fff;  
     width: 100%;  
     bottom: 0;  
     border-top: 2px solid #fff; 
+    z-index: 3;
+}
+#backToTop {
+    display: block; 
+    position: fixed; 
+    right: 0;
+    bottom: 0;
+    height: 300px;
+    width: 200px;
+    overflow: hidden;
+    background-image: url('../piuter/置顶1.png');
+    background-position: right bottom;
+    background-size: contain;
+    background-repeat: no-repeat;
+    transition: all 0.4s ease; 
+    z-index: 2;
+    &:hover {
+        cursor: url('../piuter/TB2paoVj3JlpuFjSspjXXcT.pXa_!!3037771681.png'), pointer;
+        background-image: url('../piuter/置顶2.png');
+    }
+}
+#进度条 {
+    position: fixed;
+    top: 10vh;
+    left: 0;
+    width: 100%;
+    height: 5px;
+    border-radius: 15px;
+    background-color: #ff730098;
+    z-index: 114514;
+    transition: all 0.3s;
+    display: none; 
 }
 </style>
-
 <header>  
     <h1>更新日志</h1>  
     <p>记录所有变更</p>  
 </header>
+<div class="T"></div>
+<gobalck id="backToTop"></gobalck>
+<script src="..\js\close.js"></script>
+<div id="进度条"></div>
+<script src="..\js\进度条.js"></script>
 <logs class="up-log"> 
-    <h3>V1.0</h3>  
+    <h2>V1.1</h2>
+    <ul>
+        <li>完成资源库基本功能</li>
+        <li>追加番剧资源 :<pink>魔王2099<plum>丨</plum>异种族风俗娘评鉴指南</pink></li>
+        <li class="up-log-il">本次参考 <il>bilibili<bule>丨</bule>bimibimi</il></li>
+    </ul>
+    <h2>V1.0</h2>  
     <ul>  
         <li>调整网站定位，重写网站结构</li>
         <li>新增收藏分区</li>
@@ -103,33 +174,31 @@ footer {
             logo---------Ae转<a href="https://miankoutupian.com" target="_blank" style="color: #999999;text-decoration: none;">免扣</a>
         </li>
         <li>未来主要方向仍是复刻大佬</li>
+        <li class="up-log-il">本次参考 <il>橘橘博客<bule>丨</bule>极客轩-我的技术小站</il></li>
     </ul>
-    
-    <h3>V0.62</h3>  
+    <h2>V0.62</h2>  
     <ul>  
         <li>增加卡片</li> 
     </ul> 
-
-    <h3>V0.6</h3>  
+    <h2>V0.6</h2>  
     <ul>  
         <li>新增导航栏 部分按钮有效 （待完善...</li>
         <li>新增Ciallo～(∠・ω< )⌒★</li>  
         <li>修复已知bug</li>  
         <li><del>优化性能失败 </del>图片分辨率以后再说 （</li>  
+        <li class="up-log-il">本次参考 <il>Ciallo</il></li>
     </ul>  
-
-    <h3>V0.55</h3>  
+    <h2>V0.55</h2>  
     <ul>  
         <li>新增展示卡片交互动效</li>  
         <li>修复已知bug</li>  
         <li>风格调整</li>
     </ul>  
-
-    <h3>V0.5</h3>  
+    <h2>V0.5</h2>  
     <ul>  
         <li>网站部署GitHub</li> 
+        <li class="up-log-il">本次参考 <il>小米商城</il></li>
     </ul>
-
 </logs>
 <footer>  
     <p>排版来自小米 认真你就输了（</p>  
