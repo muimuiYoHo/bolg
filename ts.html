@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="utf-8"> 
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover"> 
+    <meta name="renderer" content="webkit">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"> 
+    <meta http-equiv="Cache-Control" content="no-siteapp">  
+    <meta name="referrer" content="no-referrer">
+    <title>?</title>
+    <script src="https://cdn.jsdelivr.net/npm/hls.js@latest"></script> 
+</head>
+<body>
+    <video id="video" controls></video>
+    
+    <script>
+      if (Hls.isSupported()) {                                      // 检查Hls.js支持
+        var video = document.getElementById('video');               //获取<video>
+        var hls = new Hls();                                        //创建hls
+        hls.loadSource('static/video/ぬ/ぬ.m3u8');                  //加载列表
+        hls.attachMedia(video);                                     //与<video>关联
+        hls.on(Hls.Events.MANIFEST_PARSED, function() {             //监视-发生时   hls列表解析完成    
+          video.play();                                             //播放
+        });
+      } else if (                                                   //有没有一种可能...不支持hls.js(或犯病链不上js库)但支持hls
+          video.canPlayType('application/vnd.apple.mpegurl')) {        //喂喂...能放不     可以-application      ...-不行     我不知道-vnd.apple.mpegurl
+          video.src = 'static/video/ぬ/ぬ.m3u8';                       //改src为...
+          video.addEventListener('loadedmetadata', function() {        //dom监视    视频元数据加载完成
+          video.play();
+        });
+      }     else {                                                        //都不行                                             
+              console.error('不是,哥们...你浏览器怎么*不出来啊？换一个吧~');   //不支持报错
+            }
+            hls.on(Hls.Events.ERROR, function(event, data) {
+    if (data.fatal) {
+        switch (data.type) {
+            case Hls.ErrorTypes.NETWORK_ERROR:
+                console.error('Fatal network error, could not play the video.');
+                break;
+            case Hls.ErrorTypes.MEDIA_ERROR:
+                console.error('Fatal media error, could not play the video.');
+                break;
+            default:
+                console.error('Fatal unknown error, could not play the video.');
+                break;
+        }
+    }
+});
+    </script>
+</body>
+</html>
