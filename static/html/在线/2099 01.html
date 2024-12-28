@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="utf-8"> 
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover"> 
+    <meta name="renderer" content="webkit">  
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"> 
+    <meta http-equiv="Cache-Control" content="no-siteapp">  
+    <meta name="referrer" content="no-referrer">
+    <title>魔王2099第1话丨傲娇资源库</title>
+    <link rel="shortcut icon" href="..\..\piuter\favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" type="text/css" href="..\..\css\zyk.css">
+    <link rel="stylesheet" href="..\..\font/iconfont.css">
+    <script src="..\..\js\Ciallo～(∠・ω・ )⌒★.js"></script>
+    <script src="..\..\js\提示.js"></script>
+    <script src="..\..\font\iconfont.js"></script>   
+    <script src="..\..\js\hls.js"></script>                                            
+</head>
+<body>
+<gobalck id="backToTop"></gobalck>
+<script src="..\..\js\close.js"></script>
+<div id="进度条"></div>
+<script src="..\..\js\进度条.js"></script>
+<div class="sy-左上"></div>
+<div class="tou">
+    <nav>
+        <a href="../../../index.html">首页</a> 
+        <a href="#">动态</a>
+        <a href="..\资源库.html">资源库</a>
+        <a href="..\收藏栏.html">收藏栏</a>
+        <a href="..\日志.html" target="_blank">日志</a>
+    </nav>
+    <div class="search-nav">
+        <input type="text" class="search" placeholder="明日方舟">  
+        <button class="search-button button-r">🔍</button>      
+    </div>  
+    <div class="navv">
+        <a href="..\..\html\登录.html" target="_blank" class="nav-up">登录</a>
+        <a href="https://support.microsoft.com/zh-cn/microsoft-edge/%E6%9B%B4%E6%94%B9%E6%B5%8F%E8%A7%88%E5%99%A8%E4%B8%BB%E9%A1%B5-a531e1b8-ed54-d057-0262-cc5983a065c6" target="_blank" class="navv-1">设为首页</a>    
+        <a onclick="sc()" class="navv-2">加入收藏</a>
+    </div>
+</div> 
+<div class="bfy">          <!--播放部分-->
+    <div class="bfy-bj" style="background-image: url('../../piuter/封面/2099.jpg');     /*背景*/     
+                               background-position: center;     
+                               background-size: cover;
+                               filter: blur(40px);">                                             
+    </div>                                                                                                      <!--  ↓标题↓  -->
+    <p class="bfy-1"><a href="..\资源库.html">资源库</a> > <a>番剧资源</a> > <a href="https://cn.bing.com/search?q=魔王2099" style="color: orange;" target="_blank">魔王2099 </a><no style="color: rgba(240, 248, 255, 0);">1</no>第1话</p>
+    <div class="bfq"><video id="video" controls></video></div>
+</div>
+<div class="zzz-3">
+    <div class="zzz-3-bt"><no style="color: rgba(240, 248, 255, 0);">6</no>立刻 开冲</div>
+    <div class="zzz-3-j">
+        <a href="..\在线\2099 01.html" style="background-color: rgb(255, 131, 173);">第01话</a>
+        <a href="..\在线\2099 02.html">第02话</a>
+        <a href="..\在线\2099 03.html">第03话</a>
+        <a href="..\在线\2099 04.html">第04话</a>
+        <a href="..\在线\2099 05.html">第05话</a>
+        <a href="..\在线\2099 06.html">第06话</a>
+        <a href="..\在线\2099 07.html">第07话</a>
+        <a href="..\在线\2099 08.html">第08话</a>
+        <a href="..\在线\2099 09.html">第09话</a>
+        <a href="..\在线\2099 10.html">第10话</a>
+        <a href="..\在线\2099 11.html">第11话</a>
+        <!--<a href="..\在线\2099 12.html">第12话</a>-->
+    </div>
+</div>
+<script>
+    if (Hls.isSupported()) {                                     
+      var video = document.getElementById('video');            
+      var hls = new Hls();                                      
+      hls.loadSource('../../video/2099/1.m3u8');                
+      hls.attachMedia(video);                                    
+      hls.on(Hls.Events.MANIFEST_PARSED, function() {              
+        video.play();                                             
+      });
+    } else if (                                                 
+        video.canPlayType('application/vnd.apple.mpegurl')) {      
+        video.src = '../../video/2099/1.m3u8';                      
+        video.addEventListener('loadedmetadata', function() {       
+        video.play();
+      });
+    }     else {                                                                                               
+            console.error('不是,哥们...你浏览器怎么*不出来啊？换一个吧~');   
+          }
+  </script>
+</body>
+</html>

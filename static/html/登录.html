@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="utf-8"> 
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover"> 
+    <meta name="renderer" content="webkit"> 
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"> 
+    <meta http-equiv="Cache-Control" content="no-siteapp">
+    <title>进来了就别想走</title>
+    <link rel="stylesheet" href="..\css\登录.css">
+    <link rel="shortcut icon" href="..\piuter\favicon.ico" type="image/x-icon" />
+    <script src="..\js\登录.js"></script>
+    <script src="..\js\提示.js"></script>
+</head>
+<body>
+    <div class="container">
+        <div class="txt">
+            <strong id="txt" class="txt"></strong>
+            <script src="..\js\登录-txt.js"></script>
+        </div>
+        <form class="form" action="">
+            <div class="input-field">
+                <input required="" autocomplete="off" type="text" name="username" id="username" />
+                <label for="username">用户名</label>
+            </div>
+            <div class="input-field">
+                <input required="" autocomplete="off" type="text" name="text" id="text" />
+                <label for="text">邮箱</label>
+            </div>
+            <div class="input-field">
+                <input required="" autocomplete="off" type="password" name="password" id="password" />
+                <label for="password">密码</label>
+            </div>    
+        </form>
+        <div class="btn-container">
+            <button class="btn">提交</button>
+                <div class="txt">
+                    没有账号？那还不快
+                <span style="color: #0095ff; cursor: pointer;" onclick="zc()">注册一个！</span>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
