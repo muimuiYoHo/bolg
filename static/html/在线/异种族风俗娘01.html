@@ -14,7 +14,7 @@
     <script src="..\..\js\Ciallo～(∠・ω・ )⌒★.js"></script>
     <script src="..\..\js\提示.js"></script>
     <script src="..\..\font\iconfont.js"></script>   
-    <script src="..\..\js\hls.js"></script>                                            
+    <script src="..\..\js\hls.js"></script>                 <!--hls库  实现ts流  绕开GitHub 50mb限制-->                                      
 </head>
 <body>
 <gobalck id="backToTop"></gobalck>
@@ -40,11 +40,11 @@
         <a onclick="sc()" class="navv-2">加入收藏</a>
     </div>
 </div> 
-<div class="bfy">
+<div class="bfy">        <!--中心播放页-->
     <div class="bfy-bj" style="background-image: url('../../piuter/封面/34cffffa7c7943a5a7fd2907492eb435~noop.image');
                                background-position: center;
                                background-size: cover;
-                               filter: blur(40px);">
+                               filter: blur(40px);">   <!--背景-->
     </div>
     <p class="bfy-1"><a href="..\资源库.html">资源库</a> > <a>番剧资源</a> > <a href="https://cn.bing.com/search?q=异种族风俗娘评鉴指南" style="color: orange;" target="_blank">异种族风俗娘评鉴指南 </a><no style="color: rgba(240, 248, 255, 0);">1</no>第1话</p>
     <div class="bfq"><video id="video" controls></video></div>
@@ -67,21 +67,21 @@
     </div>
 </div>
 <script>
-    if (Hls.isSupported()) {                                     
-      var video = document.getElementById('video');            
-      var hls = new Hls();                                      
-      hls.loadSource('../../video/风俗娘/1h.m3u8');                
-      hls.attachMedia(video);                                    
-      hls.on(Hls.Events.MANIFEST_PARSED, function() {              
+    if (Hls.isSupported()) {                                        //检查hls                
+      var video = document.getElementById('video');                 //获取<>
+      var hls = new Hls();                                          //创建
+      hls.loadSource('../../video/风俗娘/1h.m3u8');                 //加载
+      hls.attachMedia(video);                                       //关联
+      hls.on(Hls.Events.MANIFEST_PARSED, function() {              //监听  解析完成事件 执行
         video.play();                                             
       });
-    } else if (                                                 
-        video.canPlayType('application/vnd.apple.mpegurl')) {      
-        video.src = '../../video/风俗娘/1h.m3u8';                      
-        video.addEventListener('loadedmetadata', function() {       
+    } else if (                                                    //有没有可能原生支持
+        video.canPlayType('application/vnd.apple.mpegurl')) {      //检查hls-mime
+        video.src = '../../video/风俗娘/1h.m3u8';                   //替换src
+        video.addEventListener('loadedmetadata', function() {       //监听   视频加载事件
         video.play();
       });
-    }     else {                                                                                               
+    }     else {                                                     //都不行...                                                                           
             console.error('不是,哥们...你浏览器怎么*不出来啊？换一个吧~');   
           }
   </script>

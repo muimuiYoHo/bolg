@@ -281,35 +281,27 @@ nav>a:hover {
   border-radius: 5px;
   overflow: hidden;
 }
-.zyk-2-gxb-kp-tp1 {
-  background: url('../piuter/封面/3b475713e8e976c910160d8712f3d376a46f98da.jpg@320w_200h_1c_!web-space-favlist-video.webp');
+.zyk-2-gxb-kp-tp {
   background-position: center;
   background-size: cover;
+}
+.zyk-2-gxb-kp-tp1 {
+  background: url('../piuter/封面/3b475713e8e976c910160d8712f3d376a46f98da.jpg@320w_200h_1c_!web-space-favlist-video.webp');
 }
 .zyk-2-gxb-kp-tp2 {
   background: url('');
-  background-position: center;
-  background-size: cover;
 }
 .zyk-2-gxb-kp-tp3 {
   background: url('');
-  background-position: center;
-  background-size: cover;
 }
 .zyk-2-gxb-kp-tp4 {
   background: url('');
-  background-position: center;
-  background-size: cover;
 }
 .zyk-2-gxb-kp-tp5 {
   background: url('');
-  background-position: center;
-  background-size: cover;
 }
 .zyk-2-gxb-kp-tp6 {
   background: url('');
-  background-position: center;
-  background-size: cover;
 }
 .zyk-2-gxb-kp-txt-1 {
   max-width: 100%;
@@ -321,6 +313,65 @@ nav>a:hover {
   font-size: 13px;
   font-weight: 500;
   color: var(--txt-up);
+}
+.zyk-3 {
+  display: flex;
+  position: relative;
+  flex-direction: column;
+  margin: 0 auto;
+  height: 470px;
+  width: 83%;
+}
+.zyk-3-bt {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  height: 20%;
+}
+.zyk-3-bt-logo {
+  height: 60%;
+  width: auto;
+}
+.zyk-3-bt-txt {
+  margin-left: 10px;
+  font-size: 25px;
+}
+.zyk-3-zqb {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: 80%;
+  background-color: rgba(128, 255, 0, 0.249);
+}
+.zyk-3-zqb-新番 {
+  display: flex;
+  overflow: hidden;
+  gap: 30px;
+  width: 100%;
+  height: 36vh;
+}
+.zyk-3-zqb-xq {
+  margin-left: auto;
+  height: 60px;
+  width: 40%;
+  background-color: bisque;
+
+}
+.zyk-3-zqb-kp {
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  border-radius: 10px;
+  max-width: 11.19vw;
+  height: 100%;
+}
+.zyk-3-zqb-tp {
+  max-width: 100%;
+  height: 29vh;                                          /*临时29  记得30------------------！！！！！！！！！！！！*/
+  transition: all 0.5s;
+  &:hover {
+    transform: scale(1.1); 
+  }
 }
 .zyk-4 {
   display: flex;
@@ -343,7 +394,7 @@ nav>a:hover {
   margin-left: 10px;
   font-size: 25px;
 }
-.zyk-4-kp-1 {
+.zyk-4-kp-1 .zyk-3-zqb-kp {            /*-------------------------------------*/
   display: flex;
   flex-shrink: 1;
   flex-direction: column;
@@ -356,6 +407,7 @@ nav>a:hover {
 .zyk-4-kp-1-tp {
   max-width: 100%;
   max-height: 30vh;
+  border-radius: 10px;
   transition: all 0.5s;
   &:hover {
     transform: scale(1.1); 

@@ -12,12 +12,16 @@
     </head>
     <body>
 <style>
+    * {
+    margin: 0;
+    padding: 0;
+}
 body {  
     font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; 
     line-height: 1.6;  
     margin: 0;  
     padding: 0;  
-    background-color: #f7f7f7; 
+    background-color: #f6f7fa ;
     color: #333;  
     cursor: url('../piuter/TB2LdUrj9tkpuFjy0FhXXXQzFXa_!!3037771681.png'), default;
 }  
@@ -42,37 +46,123 @@ header h1 {
     font-weight: normal;  
 }  
 header p {  
-    margin-top: 80px;
-    font-size: 0.95rem;  
+    margin-top: 65px;
+    font-size: 0.9rem;  
     color: #999999;   
 }  
-.T {
-    height: 10vh;
-    width: auto;
+li {
+    list-style: none;
+    position: relative;
+    margin-left: 15px;
 }
-.up-log {  
-    margin-bottom: 2rem; 
-    z-index: 1; 
-}  
-.up-log ul {  
-    list-style-type: none; 
-    padding-left: 0;  
-}  
-.up-log li {  
-    margin-bottom: 0.5rem;  
-    position: relative;  
-    padding-left: 1.5rem;  
-    color: #666666; 
-}  
-.up-log li::before {      /*byd找不到圆点svg*/
+li::before {     
     content: '';  
     position: absolute;  
-    left: 0;  
+    left: -13px;  
     top: 0.7rem;
     width: 6px;  
     height: 6px;  
     background-color: #1877f2;
     border-radius: 50%; 
+}
+zy {
+    position: relative;
+    margin-left: 15px;
+}
+zy::after {     
+    content: '';  
+    position: absolute;  
+    left: -13px;  
+    top: 0.35rem;
+    width: 6px;  
+    height: 6px;  
+    background-color: aqua;
+    border-radius: 50%; 
+}
+oo {
+    position: relative;
+    margin-left: 15px;
+}
+oo::after {     
+    content: '';  
+    position: absolute;  
+    left: -13px;  
+    top: 0.35rem;
+    width: 6px;  
+    height: 6px;  
+    background-color: orangered;
+    border-radius: 50%; 
+}
+div {
+    display: block;
+    unicode-bidi: isolate;
+}
+.logs {
+    margin-top: 20vh;
+    margin-bottom: 80px;
+    width: 100%;
+}
+.log {
+    width: 990px;
+    clear: both;
+    margin: 0 auto;
+    position: relative;
+}
+.log-time {
+    float: left;
+    width: 110px;
+    height: 24px;
+    padding-left: 10px;
+    color: #6d757a;
+    font-size: 14px;
+    line-height: 28px;
+}
+.log-time-q {
+    width: 9px;
+    height: 9px;
+    padding: 5px;
+    border: 1px solid #e5e9ef;
+    position: absolute;
+    left: 109px;
+    top: 3px;
+    border-radius: 100%;
+    z-index: 1;
+}
+.log-time-q div {
+    border-radius: 100%;
+    width: 9px;
+    height: 9px;
+    background-color: #e5e9ef;
+}
+.log-bt {
+    position: relative;
+    color: #6d757a;
+    font-size: 16px;
+    font-weight: bold;
+    padding-left: 42px;
+    line-height: 24px;
+    display: inline-block;
+}
+.log-bt-2 {
+    font-size: 16px;
+}
+.log-nr {
+    float: right;
+    width: 828px;
+    border-left: 1px solid #e5e9ef;
+    padding: 24px 0 48px 42px;
+    color: #6d757a;
+    margin-bottom: -3px;
+    font-size: 14px;
+    line-height: 28px;
+}
+.log-nr::after {
+    content: "";
+    display: block;
+    visibility: hidden;
+    height: 0;
+    clear: both;
+    font-size: 0;
 }
 il {
     color: orange;
@@ -86,22 +176,13 @@ pink {
 plum {
     color: plum;
 }
-.up-log-il::after {     
-    content: '';  
-    position: absolute;  
-    left: 0;  
-    top: 0.7rem;
-    width: 6px;  
-    height: 6px;  
-    background-color: orangered;
-    border-radius: 50%; 
-}
 footer {  
-    text-align: center;  
+    display: flex;
+    align-items: center;
     justify-content: center;
-    padding: 1rem 0;  
     background: #ff730098;   
     color: #fff;  
+    height: 80px;
     width: 100%;  
     bottom: 0;  
     border-top: 2px solid #fff; 
@@ -139,69 +220,165 @@ footer {
     display: none; 
 }
 </style>
-<header>  
-    <h1>更新日志</h1>  
-    <p>记录所有变更</p>  
-</header>
-<div class="T"></div>
 <gobalck id="backToTop"></gobalck>
 <script src="..\js\close.js"></script>
 <div id="进度条"></div>
 <script src="..\js\进度条.js"></script>
-<logs class="up-log"> 
-    <h2>V1.1</h2>
-    <ul>
-        <li>完成资源库基本功能</li>
-        <li>追加番剧资源 :<pink>魔王2099<plum>丨</plum>异种族风俗娘评鉴指南</pink></li>
-        <li class="up-log-il">本次参考 <il>bilibili<bule>丨</bule>bimibimi</il></li>
-    </ul>
-    <h2>V1.0</h2>  
-    <ul>  
-        <li>调整网站定位，重写网站结构</li>
-        <li>新增收藏分区</li>
-        <li>新增登录/表单页</li>
-        <li>新增公告div/置顶功能/收藏功能</li>
-        <li>增加交互动画</li>
-        <li>增加首页内容板块</li> 
-        <li>增加所有图片分辨率</li>
-        <li>优化了Ciallo的位置逻辑</li>
-        <li>优化部分交互动画</li>
-        <li>内容调整</li>
-        <li>本次引入...<br>
-            网页图标---bilibili<br>
-            装饰图------萌娘百科<br>
-            所有插图---未来放资源库<br>
-            logo---------Ae转<a href="https://miankoutupian.com" target="_blank" style="color: #999999;text-decoration: none;">免扣</a>
-        </li>
-        <li>未来主要方向仍是复刻大佬</li>
-        <li class="up-log-il">本次参考 <il>橘橘博客<bule>丨</bule>极客轩-我的技术小站</il></li>
-    </ul>
-    <h2>V0.62</h2>  
-    <ul>  
-        <li>增加卡片</li> 
-    </ul> 
-    <h2>V0.6</h2>  
-    <ul>  
-        <li>新增导航栏 部分按钮有效 （待完善...</li>
-        <li>新增Ciallo～(∠・ω< )⌒★</li>  
-        <li>修复已知bug</li>  
-        <li><del>优化性能失败 </del>图片分辨率以后再说 （</li>  
-        <li class="up-log-il">本次参考 <il>Ciallo</il></li>
-    </ul>  
-    <h2>V0.55</h2>  
-    <ul>  
-        <li>新增展示卡片交互动效</li>  
-        <li>修复已知bug</li>  
-        <li>风格调整</li>
-    </ul>  
-    <h2>V0.5</h2>  
-    <ul>  
-        <li>网站部署GitHub</li> 
-        <li class="up-log-il">本次参考 <il>小米商城</il></li>
-    </ul>
-</logs>
+<header>  
+    <h1>更新情报</h1>  
+    <p>记录所有变更</p>  
+</header>
+<div class="logs">
+    <div class="log">
+        <div class="log-time">
+            2024-12-29
+            <div class="log-time-q">
+                <div></div>
+            </div>
+        </div>
+        <div class="log-bt">V1.1 内容更新</div>
+        <div class="log-nr">
+            <txt class="log-bt-2">更新 :</txt>
+            <br>
+                <li>调整日志布局</li>
+            <txt class="log-bt-2">追加 :</txt>
+            <br>
+                <zy>番剧资源 :<pink> 魔王2099<plum>丨</plum>异种族风俗娘评鉴指南</pink></zy><br>
+            <txt class="log-bt-2">调整 :</txt>
+            <br>
+                <li>简化代码</li>
+        </div>
+    </log>
+    <div class="log">
+        <div class="log-time">
+            2024-12-??
+            <div class="log-time-q">
+                <div></div>
+            </div>
+        </div>
+        <div class="log-bt">V1.0 版本更新</div>
+        <div class="log-nr">
+            <txt class="log-bt-2">更新 :</txt>
+            <br>
+                <li>调整网站定位，重写网站结构</li>
+                <li>新增收藏分区</li>
+                <li>新增登录/表单页</li>
+                <li>新增公告div/置顶功能/收藏功能</li>
+                <li>增加交互动画</li>
+                <li>增加首页内容板块</li> 
+                <li>增加所有图片分辨率</li>
+            <txt class="log-bt-2">调整 :</txt>
+            <br>
+                <li>优化了Ciallo的位置逻辑</li>
+                <li>优化部分交互动画</li>
+                <li>内容调整</li>
+            <txt class="log-bt-2">说明 :</txt>
+            <br>
+                <li>本次引入...<br>
+                    网页图标---bilibili<br>
+                    装饰图------萌娘百科<br>
+                    所有插图---未来放资源库<br>
+                   logo---------Ae转<a href="https://miankoutupian.com" target="_blank" style="color: #999999;text-decoration: none;">免扣</a>
+                </li>
+                <li>未来主要方向仍是复刻大佬</li>
+                <oo>本次参考 <il>橘橘博客<bule>丨</bule>极客轩-我的技术小站</il></oo>
+        </div>
+    </div>
+    <div class="log">
+        <div class="log-time">
+            2024-11-??
+            <div class="log-time-q">
+                <div></div>
+            </div>
+        </div>
+        <div class="log-bt">V0.62</div>
+        <div class="log-nr">
+            <txt class="log-bt-2">更新 :</txt>
+            <br>
+                <li>增加卡片</li>
+        </div>
+    </div>
+    <div class="log">
+        <div class="log-time">
+            2024-11-??
+            <div class="log-time-q">
+                <div></div>
+            </div>
+        </div>
+        <div class="log-bt">V0.6</div>
+        <div class="log-nr">
+            <txt class="log-bt-2">更新 :</txt>
+            <br>
+                <li>新增导航栏 部分按钮有效 （待完善...</li>
+                <li>新增Ciallo~(∠・ω< )⌒★</li>
+            <txt class="log-bt-2">更新 :</txt>
+            <br>
+                <li>修复已知bug</li>
+            <txt class="log-bt-2">说明 :</txt>
+            <br>
+                <li><del>优化性能失败 </del>图片分辨率以后再说 （</li>
+                <oo>本次参考 <il>Ciallo</il></oo>
+        </div>
+    </div>    
+    <div class="log">
+        <div class="log-time">
+            2024-11-??
+            <div class="log-time-q">
+                <div></div>
+            </div>
+        </div>
+        <div class="log-bt">V0.55</div>
+        <div class="log-nr">
+            <txt class="log-bt-2">更新 :</txt>
+            <br>
+                <li>新增展示卡片交互动效</li>
+                <li>风格调整</li>
+            <txt class="log-bt-2">修复 :</txt>
+            <br>
+                <li>修复已知bug</li> 
+        </div>
+    </div>
+    <div class="log">
+        <div class="log-time">
+            2024-10-12
+            <div class="log-time-q">
+                <div></div>
+            </div>
+        </div>
+        <div class="log-bt">V0.5</div>
+        <div class="log-nr">
+            <txt class="log-bt-2">更新 :</txt>
+            <br>
+                <li>网站部署GitHub</li>
+            <txt class="log-bt-2">更新 :</txt>
+            <br>
+            <oo class="up-log-il">本次参考 <il>小米商城</il></oo>
+        </div>
+    </div>
+                                           <!--   ↓ 新log塞这里 ↓   -->
+</div>
 <footer>  
     <p>排版来自小米 认真你就输了（</p>  
 </footer>
 </body>
 </html>
+<!--
+    <div class="log">
+        <div class="log-time">
+            时间
+            <div class="log-time-q">
+                <div></div>
+            </div>
+        </div>
+        <div class="log-bt">主标题</div>
+        <div class="log-nr">
+            <txt class="log-bt-2">副标题</txt>
+            <br>
+        </div>
+    </div>  
+
+    -----------规则----------------
+    资源    zy
+    复刻    oo
+
+-->
