@@ -20,23 +20,12 @@ body {
 a:hover {
     cursor: url('../piuter/TB2paoVj3JlpuFjSspjXXcT.pXa_!!3037771681.png'), pointer;
 }
-:root {
-  --txt-0: rgb(0, 0, 0,0.5);       /*模块  tag标题*/
-  --txt-up: rgba(0, 0, 0, 0.45);       /*up的name  副标题*/
-  --txt-man-tag : rgb(0, 0, 0,0.5);   /*副tag*/
-  --background-color-tag : rgba(0, 0, 0, 0.03);  /*tag背景*/
-  --background-color-jdt : rgba(0, 0, 0, 0.06);  /*装饰条*/
-  --padding-ty : rgba(0, 0, 0, 0.02);         /*通用边框*/
-  --padding-j : rgba(0, 0, 0, 0.1);      /*集边框*/
-  --background-color-bf : rgba(0, 0, 0, 0.6);   /*看番*/
-}
 #进度条 {
   position: fixed;
   top: 0;
   left: 0;
   width: 100%;
   height: 5px;
-  border-radius: 15px;
   background-color: orange;
   z-index: 114514;
   transition: all 0.3s;

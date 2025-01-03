@@ -1,31 +1,22 @@
 /*这里负责整体样式*/
 /* mac_* æ ·å¼*/
 /*å»¶æ—¶åŠ è½½*/
-.banner1 {                                          /*这是开屏页        现在不需要了...*/
-    background-image: url('../piuter//0.jpg');      /*背景图*/
-    height: 800px;                                 /*高*/
-    background-size: cover;                        /*自适应*/
-    display: flex;                                 /*flex*/
-    justify-content: center;                       /*水平居中*/
-    align-items: center;                           /*垂直居中*/
-    color: rgb(254, 152, 97);                    /*文字颜色*/
-    font-size: 2em;                                /*2x*/
-    position: relative;                            /*相对定位*/
-}  
-ul, li, a {  
+ul, li,a,div {  
     margin: 0;  
     padding: 0;  
     list-style: none;  
+    line-height: normal;
     text-decoration: none;  
 }  
 body {  
+    overflow-x: hidden;
     margin: 0;  
     padding: 0;  
     list-style: none;  
     text-decoration: none;  
     font-family: Arial, sans-serif;  
     box-sizing: border-box;
-    background-color: #f6f7fa;
+    background-color: var(---background-ty);
     cursor: url('../piuter/TB2LdUrj9tkpuFjy0FhXXXQzFXa_!!3037771681.png'), default;
 }  
 a:hover {
@@ -41,11 +32,20 @@ a:hover {
 red {
     color: red;
 }
+yellow {
+    color: yellow;
+}
+skyblue {
+    color: #00eaff;
+}
 orange {
     color: orange;
 }
 no {
     color: #00000000;
+}
+.↓ {
+    transform: rotate(-90deg);
 }
 /**--------------------------------------------------- é¼ æ ‡æ ·å¼ ç»“æŸ-----------------------------------------------------------**/
 #sy-0 {
@@ -101,7 +101,6 @@ no {
     left: 0;
     width: 100%;
     height: 5px;
-    border-radius: 15px;
     background-color: orange;
     z-index: 114514;
     transition: all 0.3s;
@@ -122,7 +121,6 @@ no {
     transition: all 0.4s ease; 
     &:hover {
         cursor: url('../piuter/TB2paoVj3JlpuFjSspjXXcT.pXa_!!3037771681.png'), pointer;
-        background-image: url('../piuter/置顶2.png');
     }
 }
 .sy-左上 {
@@ -137,40 +135,97 @@ no {
     background-repeat: no-repeat;
 }
 nav {  
-    overflow: hidden;  
+    display: flex;
     position: fixed;
     top: 20px;  
     width: 94%;  
     left: 2.7%;
     border-radius: 15px;
     z-index: 114513; 
-    display: flex;  
     flex-shrink: 0;
     align-items: center;    
     height: 70px;       
     background-color: #00000000;
     transition: all 1.5s;
     backdrop-filter: blur(0px);
-    overflow: hidden;
     border-bottom: 2px solid rgba(255, 255, 255, 0);
     border-bottom-width: 50%;
 }  
-nav>a {  
+nav a {  
+    display: flex;
+    white-space: nowrap;
+    align-items: center;
     text-decoration: none;  
     color: rgb(0, 0, 0);  
-    font-size: 18px;  
-    display: block;  
     transition:color 0.3s; 
-    font-size: 1.2em;
-    margin: 25px;
+    font-size: 1.3em;
+    margin: 20px;
+    &:hover {
+        color: rgb(255, 217, 0);
+    }
 }  
-nav>a:hover {  
-    color: rgb(255, 217, 0);  
-}  
+.nav-zcd {                      /*更多   */
+    display: flex;
+    &:hover > a {                /*更多a*/
+        color: rgb(255, 217, 0);
+    }
+    &:hover .nav-gd a {  /*触发子菜单后 a有下一级触发内容 而不直接触发*/
+        &:hover {                         /*普通a*/
+            color: white;
+            background-color: pink;
+            transition: all .3s;
+            &:hover skyblue,yellow {        /*有颜色标签a 多嵌1套---使用单独颜色标签导致<a>不管文字*/
+                color: white;
+            }
+        }
+    }
+    &:hover .nav-gd {             /*子菜单动画*/
+        top: 99%;
+        opacity: 1;
+        pointer-events: auto;
+    }
+    &:hover .nav-↓ {
+        transform: rotate(-90deg);
+        color: pink;
+    }
+}
+.nav-↓ {
+    transition: all .3s;
+}
+.nav-gd {
+    display: flex;
+    pointer-events: none;
+    transition: all .3s cubic-bezier(0.00, 0.5, 0.00, 1);
+    justify-content: space-between;
+    flex-wrap: wrap;
+    position: absolute;
+    opacity: 0;
+    padding: 10px;
+    width: 560px;
+    left: 370px;
+    top: 149%;
+    z-index: -1;
+    line-height: 16px;
+    border-radius: 0 0 5px 5px;
+    backdrop-filter: blur(50px);
+    background-color: #fbfcfd;
+}
+.nav-gd a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 10px;
+    font-size: 15px;
+    width: 100px;
+    height: 40px;
+    border-radius: 5px;
+    background-color: var(--background-color-tag-gd);
+    transition: all .3s;
+}
 .nav-logo {  
     flex-shrink: 0;
     bottom: 0;
-    margin-left: 20px;
+    margin-left: 15px;
 }  
 .nav-logo img {  
     height: 35px;  
@@ -179,6 +234,7 @@ nav>a:hover {
 .nav-up {
     margin-left: auto;
     display: flex;
+    flex-shrink: 0;
     overflow: hidden;
     align-items: center;
     justify-content: center;
@@ -247,12 +303,11 @@ nav>a:hover {
     bottom: 25px;                        /*0~25*/
     left: 49%;
     font-size: 1.7em;
-    transform: rotate(-90deg);
     overflow: hidden;
-    animation: x 1.5s infinite;
+    animation: ↑↓ 1.5s infinite;
     animation-timing-function: cubic-bezier(0.42, 0.00, 0.58, 1.00);
 }
-@keyframes x {
+@keyframes ↑↓ {
     0%   {bottom: 25px;}
     50% {bottom: 0px;}
     100%   {bottom: 25px;}
@@ -260,7 +315,6 @@ nav>a:hover {
 /*--------------------------------------------------------------------------------------------------------------------------------------------------------*/
 .sy-2 {
     display: flex;
-    flex-shrink: 0;
     height: 345px;
     width: 70%;
     margin-top: 20px;
@@ -352,7 +406,7 @@ z-index: -1;
 }
 .sy-2-card2 {
     display: flex;
-    background: #fbfcfd; 
+    background: var(--card-ty); 
     border-radius: 10px;  
     max-height: 47%;
     width: 48.74%; 
@@ -408,7 +462,6 @@ z-index: -1;
 /*----------------------------------------------------------------------------------------------------------------------------------------------------------*/
 .sy-3 {
     display: flex;
-    flex-shrink: 0;
     height: 434px;
     width: 70%;
     margin-top: 20px;
@@ -416,6 +469,7 @@ z-index: -1;
     margin-right: auto;
     border-radius: 10px;
     overflow: hidden;
+    background-color: white;
 }
 .sy-3-lb {
     display: flex;
@@ -483,7 +537,7 @@ z-index: -1;
 /*----------------------------------------------------------------------------------------------------------------------------------------------------------*/
 footer {              
     display: block;
-    background-color: rgb(255, 255, 255);  
+    background-color: white;  
     text-align: center;  
     top: 20px;
     border-radius: 10px 10px 0 0;

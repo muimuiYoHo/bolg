@@ -8,3 +8,6 @@ function zc() {
 function 没有() {  
     alert('@TA暂时没有抖音哦~');  
 }  
+function 友链() {  
+    alert('笑死，我也有朋友');  
+}  
