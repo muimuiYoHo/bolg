@@ -1,13 +1,13 @@
 // 切换密码显示/隐藏
-function togglePassword() {
+  function togglePassword() {
     const passwordInput = document.getElementById('password');  
     const passIcon = document.querySelector('.passicon');
     if (passwordInput.type === 'password') {
       passwordInput.type = 'text';
-      passIcon.textContent = '🙈'; // 更改为“🙈”表示密码可见
+      passIcon.textContent = '🙈'; // 更改为密码可见
     } else {
       passwordInput.type = 'password';
-      passIcon.textContent = '👁️'; // 更改为“👁️”表示密码隐藏
+      passIcon.textContent = '👁️'; // 更改为密码隐藏
     }
   }
   // 验证
@@ -48,4 +48,8 @@ function togglePassword() {
     }
   });
   
+  document.addEventListener('DOMContentLoaded', function() {
+    var top = document.getElementById('dl');
+    top.style.color = 'black';
+  });
 

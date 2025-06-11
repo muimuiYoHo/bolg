@@ -4,7 +4,7 @@
     --txt-man-tag : rgb(0, 0, 0,0.5);   /*副tag*/
     --background-color-tag : rgba(0, 0, 0, 0.03);  /*tag背景*/
     --background-color-tag-gd : rgba(0, 0, 0, 0.03);;  /*子菜单*/
-    --background-color-jdt : rgba(0, 0, 0, 0.06);  /*装饰条*/
+    --background-color-jdt : rgba(41, 21, 21, 0.06);  /*装饰条*/
     --padding-ty : rgba(0, 0, 0, 0.02);         /*通用边框*/
     --padding-j : rgba(0, 0, 0, 0.1);      /*集边框*/
     --background-color-bf : rgba(0, 0, 0, 0.6);   /*看番*/
