@@ -62,6 +62,59 @@ no {
 .↓ {
     transform: rotate(-90deg);
 }
+.loading {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #ffffff;
+    z-index: 6;
+    transition: all  0.5s ease;
+    .loading动画 {
+        display: flex;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 250px;
+        height: 250px;
+        overflow: hidden;
+        z-index: 2;
+        .loading方块 {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 50%;
+            height: 50%;
+            background-color: #f04e1f;
+            animation: loading 1.5s cubic-bezier(0, 0.5, 0.5, 1) infinite;
+            animation-delay: -0.3s;
+        }
+    }
+}
+@keyframes loading {
+    0% {
+        background-color: #f04e1f;
+        transform: translate(0, 0);
+    }
+    25% {
+        background-color: #7eb603;
+        transform: translate(100%, 0);
+    }
+    50% {
+        background-color: #fcb600;
+        transform: translate(100%, 100%);
+    }
+    75% {
+        background-color: #01a1ed;
+        transform: translate(0, 100%);
+    }
+    100% {
+        background-color: #f04e1f;
+        transform: translate(0, 0);
+    }
+}
 /**--------------------------------------------------- é¼ æ ‡æ ·å¼ ç»“æŸ-----------------------------------------------------------**/
 .sy-0 {
     position: fixed;
@@ -183,9 +236,9 @@ no {
 #backToTop {
     display: block; 
     position: fixed; 
-    right: 0;
+    right: -90px;
     bottom: 0;
-    height: 300px;
+    height: 200px;
     width: 200px;
     overflow: hidden;
     background-image: url('../piuter/置顶1.png');
@@ -194,6 +247,7 @@ no {
     background-repeat: no-repeat;
     transition: all 0.4s ease; 
     &:hover {
+        right: 0;
         cursor: url('../piuter/TB2paoVj3JlpuFjSspjXXcT.pXa_!!3037771681.png'), pointer;
     }
 }
@@ -215,7 +269,7 @@ nav {
     width: 94%;  
     left: 2.7%;
     border-radius: 15px;
-    z-index: 114513; 
+    z-index: 5; 
     flex-shrink: 0;
     align-items: center;    
     height: 70px;       
@@ -385,7 +439,7 @@ nav a {
     background-clip: text;
     background-image: linear-gradient(to right, #ff2828 0%, #ffde39 20%, #a7fe7b 40%, #32c8ff 60%, #fe7bf3 80%, #ff2828 100%, transparent 100% );
     background-size: 300% 100%;
-    animation: colorFlow 4s linear infinite;
+    animation: colorFlow 3.5s linear infinite;
     &::before {
         content: "★";
         position: absolute;
@@ -908,7 +962,7 @@ footer {
 .footer-a:hover {
     color: white;
 }
-.footer-a::before {                                 /*这伪不比b站那些搬运油管教程的干净*/
+.footer-a::before {                                 /*这伪不比那些搬运油管教程的干净*/
     content: '';
     position: absolute;
     top: 70%;
