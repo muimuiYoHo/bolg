@@ -37,3 +37,24 @@ function 现在的Solgan是() {
 现在的Solgan是();                                                                //继续执行同一函数
 //https://penghy.com/?p=typing-switching-animation-with-a-html-single-file
 //有修改
+const 壁纸数组 = [
+    'sy-1-壁纸-1',
+    'sy-1-壁纸-2',
+    'sy-1-壁纸-3',
+    'sy-1-壁纸-4'
+];
+const 背景元素 = document.querySelector('.sy-1');
+const 更换按钮 = document.querySelector('xx[data-⭐]');
+更换按钮.addEventListener('click', function() {
+    const 当前类 = Array.from(背景元素.classList).find(className => 壁纸数组.includes(className));
+    let 新壁纸类;
+    do {
+        const 随机索引 = Math.floor(Math.random() * 壁纸数组.length);
+        新壁纸类 = 壁纸数组[随机索引];
+    } while (新壁纸类 === 当前类);
+    if (当前类) {
+        背景元素.classList.remove(当前类);
+    }
+    背景元素.classList.add(新壁纸类);
+});
+

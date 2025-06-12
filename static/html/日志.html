@@ -20,12 +20,38 @@
     <h1>更新情报</h1>  
     <p>记录所有变更</p>  
 </header>
+<div class="装饰图 装饰图-1"></div>
+<div class="装饰图 装饰图-2"></div>
+<div class="装饰图 装饰图-3"></div>
 <div class="logs">
     <!--  -->
     <div class="log">
         <div class="log-time">
+            2025-6-12
+            <div class="log-time-q">
+                <div></div>
+            </div>
+        </div>
+        <div class="log-bt">V1.3 修复更新</div>
+        <div class="log-nr">
+            <txt class="log-bt-2">更新 :</txt>
+            <br>
+                <li>首页封面更新优化</li>
+                <li>美化日志</li>
+            <txt class="log-bt-2">追加 :</txt>
+            <br>
+                <li>新的壁纸</li>
+            <br>
+                <txt class="log-bt-2">调整 :</txt>
+            <br>
+                <li>优化代码</li>
+        </div>
+    </div>
+    <!--  -->
+    <div class="log">
+        <div class="log-time">
             2025-6-11
-            <div class="log-time-q log-time-q-当前">
+            <div class="log-time-q">
                 <div></div>
             </div>
         </div>
@@ -184,7 +210,39 @@
     <p>排版来自小米 认真你就输了（</p>  
 </footer>
 <style>
-    * {
+.装饰图 {
+    position: absolute;
+    right: 10%;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+.装饰图-1 {
+    top: 40%;
+    width: 340px;
+    height: 460px;
+    transform: rotate(-10deg);
+    border: 2px solid #ffc7a6;
+    background-image: url('../piuter/1097026270.jpg');
+}
+.装饰图-2 {
+    top: 135%;
+    width: 400px;
+    height: 580px;
+    transform: rotate(5deg) scale(.8);
+    border: 2px solid #ffc7a6;
+    background-image: url('../piuter/Image_340016377543052.jpg');
+}
+.装饰图-3 {
+    top: 180%;
+    right: -10%;
+    width: 1104px;
+    height: 1553px;
+    transform: rotate(20deg) scale(.3);
+    border: 6px solid #ffd7e6;
+    background-image: url('../piuter/1205254340.jpg');
+}
+* {
     margin: 0;
     padding: 0;
 }
@@ -326,12 +384,15 @@ div {
 .log-nr {             /*内容*/
     float: right;
     width: 828px;
-    border-left: 1px solid #e5e9ef;
+    border-left: 2px solid #e5e9ef;
     padding: 24px 0 48px 42px;
     color: #6d757a;
     margin-bottom: -3px;
     font-size: 14px;
     line-height: 28px;
+}
+.log-nr-当前 {
+    border-left: 2px solid #97d2ff;
 }
 .log-nr::after {
     content: "";
@@ -396,6 +457,12 @@ footer {
 }
 </style>
 </body>
+<script>
+    let 最新情报 = document.querySelector('.log-time-q');
+    let 情报列表 = document.querySelector('.log-nr');
+    最新情报.classList.add('log-time-q-当前');
+    情报列表.classList.add('log-nr-当前');
+</script>
 </html>
 <!--
     <div class="log">
